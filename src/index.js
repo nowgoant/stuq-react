@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+var context = {
+  title: 'hi,react'
+};
+ReactDOM.render(<App context={context} />, document.getElementById('root'));

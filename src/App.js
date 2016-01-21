@@ -5,7 +5,6 @@ from 'react';
 
 export default class App extends Component {
   state = {
-    context: [],
     showOptions: false
   }
 
@@ -41,9 +40,10 @@ export default class App extends Component {
     }
 
     return (
-      <div className="dropdown" onClick={::this.handleClick}>
-        <label>请选择</label>
-        {options}        
+      <div className="dropdown">
+        <h1>{this.props.context.title}</h1>
+        <label onClick={::this.handleClick}>请选择</label>
+        {options}
       </div>
     );
   }
